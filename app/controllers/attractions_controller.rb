@@ -22,11 +22,16 @@ class AttractionsController <ApplicationController
   end
 
   def new
-
   end
 
   def create
+    attraction = Attraction.new(attraction_params)
 
+    if attraction.save
+      redirect_to attraction_path(attraction)
+    else
+      redirect_to new_attraction_path
+    end
   end
 
   def edit
