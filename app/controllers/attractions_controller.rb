@@ -41,6 +41,7 @@ class AttractionsController <ApplicationController
 
   def update
     @attraction.update(attraction_params)
+    redirect_to
   end
 
   private
