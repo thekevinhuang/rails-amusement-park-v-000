@@ -40,7 +40,7 @@ class AttractionsController <ApplicationController
   end
 
   def update
-    
+    @attraction.update(attraction_params)
   end
 
   private
