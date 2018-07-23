@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   delete '/sessions' => 'sessions#destroy'
 
   post '/ride' => 'attractions#ride'
+
+  
 end
