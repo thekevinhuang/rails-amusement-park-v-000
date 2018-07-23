@@ -1,4 +1,10 @@
-<%=form_tag ({controller: 'attractions', action: 'ride', method: 'post'}) do %>
-  <%=hidden_field_tag 'attraction_id', params[:id]%>
-  <%=submit_tag "Go on this ride"%>
+<%="#{@attraction.name}"%> <br><br>
+
+<%if @user.admin%>
+
+<%else%>
+  <%=form_tag ({controller: 'attractions', action: 'ride', method: 'post'}) do %>
+    <%=hidden_field_tag 'attraction_id', params[:id]%>
+    <%=submit_tag "Go on this ride"%>
+  <%end%>
 <%end%>
