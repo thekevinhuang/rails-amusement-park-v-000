@@ -1,4 +1,5 @@
 class AttractionsController <ApplicationController
+  before_action :
 
   def index
     @attractions = Attraction.all
@@ -21,7 +22,7 @@ class AttractionsController <ApplicationController
   end
 
   def new
-
+    
   end
 
   def create
@@ -40,5 +41,9 @@ class AttractionsController <ApplicationController
 
   def attraction_params
     params.require(:attraction).permit(:name, :tickets, :nausea_rating, :happiness_rating, :min_height)
+  end
+
+  def find_attraction
+    @attraction = Attraction.find_by(id: params[:id])
   end
 end
