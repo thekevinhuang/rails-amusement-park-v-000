@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   post '/ride' => 'attractions#ride'
 
-  
+
 end
