@@ -6,6 +6,7 @@ class AttractionsController <ApplicationController
   end
 
   def show
+    @user = current_user
     @attraction = Attraction.find_by(id: params[:id])
   end
 
