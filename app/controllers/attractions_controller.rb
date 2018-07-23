@@ -17,4 +17,12 @@ class AttractionsController <ApplicationController
     flash[:message] = ride.take_ride
     redirect_to user_path(current_user)
   end
+
+  def new
+
+  end
+
+  def create
+
+  end
 end
