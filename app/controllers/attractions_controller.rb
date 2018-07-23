@@ -22,6 +22,7 @@ class AttractionsController <ApplicationController
   end
 
   def new
+    @attraction = Attraction.new
   end
 
   def create
